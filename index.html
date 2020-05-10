@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    label{
+        display: block;
+    }
+    .labelEC{
+        display: inline;
+    }
+</style>
+<body>
+    <form action="">
+        <label>Nombre:
+            <input class="nombre" type="text">
+        </label>
+        <label>Apellido:
+            <input class="apellido" type="text">
+        </label>
+        <label>Sexo:
+            <select  class="sexo">
+                <option value="mujer">Mujer</option>
+                <option value ="varon">Varón</option>
+            </select>
+        </label>
+        
+        <label>Es vegetariano:
+            <input class="vegetarian"  type="checkbox">
+        </label>
+        <label>Estado civil:
+            <label class="labelEC">soltero
+                <input class="estadoC" type="radio" value="soltero" name="estadoC">
+            </label>
+            <label class="labelEC">casado
+                <input class="estadoC" type="radio" value="casado" name="estadoC">
+            </label>
+            <label class="labelEC">Viudo
+                <input class="estadoC" type="radio" value="casado" name="estadoC">
+            </label>
+
+        </label>
+        <button type="button" class="boton">Guardar</button>
+        
+    </form>
+
+    <div>
+        <ul class="listado">
+        </ul>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.6.1.js"></script>
+    
+    <script src="script.jqueryFunctions.js"></script>
+</body>
+
+</html>

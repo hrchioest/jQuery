@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>Document</title>
     
 </head>
@@ -13,47 +15,99 @@
     .labelEC{
         display: inline;
     }
+    form{
+        margin: 25px;
+        padding: 58px;
+        box-shadow: 4px 1px 21px 2px #a49b9b;
+    }
+    h1{
+        text-align: center;
+        font-size: 30px;
+        padding: 15px;
+    }
 </style>
 <body>
-    <form action="">
-        <label>Nombre:
-            <input class="nombre" type="text">
-        </label>
-        <label>Apellido:
-            <input class="apellido" type="text">
-        </label>
-        <label>Sexo:
-            <select  class="sexo">
-                <option value="mujer">Mujer</option>
-                <option value ="varon">Varón</option>
-            </select>
-        </label>
-        
-        <label>Es vegetariano:
-            <input class="vegetarian"  type="checkbox">
-        </label>
-        <label>Estado civil:
-            <label class="labelEC">soltero
-                <input class="estadoC" type="radio" value="soltero" name="estadoC">
-            </label>
-            <label class="labelEC">casado
-                <input class="estadoC" type="radio" value="casado" name="estadoC">
-            </label>
-            <label class="labelEC">Viudo
-                <input class="estadoC" type="radio" value="casado" name="estadoC">
-            </label>
+    <form>
+        <h1>FORMULARIO</h1>
+        <div class="form-group row">
+            <label for="inputNombre" class="col-sm-2 col-form-label">Nombre:</label>
+            <div class="col-sm-10">
+                <input class="nombre" type="text form-control" id="inputNombre">
+            </div>
+        </div>
 
-        </label>
-        <button type="button" class="boton">Guardar</button>
+        <div class="form-group row">
+            <label for="inputApellido" class="col-sm-2 col-form-label">Apellido:</label>
+            <div class="col-sm-10">
+                <input class="apellido" type="text" id="inputApellido">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputSexo" class="col-sm-2 col-form-label">Sexo:</label>
+                <select  class="sexo">
+                    <option value="mujer">Mujer</option>
+                    <option value ="varon">Varón</option>
+                </select>
+        </div> 
         
+        <div class="form-group row">
+            <div class="col-sm-2">Tipo de alimentación</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="vegetarian form-check-input" type="checkbox" id="gridCheck1">
+                    <label class="form-check-label" for="gridCheck1">Vegetariano:</label>
+                </div>
+            </div>
+        </div>
+
+        <fieldset class="form-group">
+            <div class="row">
+                <label class="col-form-label col-sm-2 pt-0">Estado civil:</label>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="estadoC form-check-input" type="radio" value="soltero" name="estadoC" id="gridRadios1">
+                        <label class="labelEC form-check-label" for="gridRadios1">soltero</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="estadoC form-check-input" type="radio" value="casado" name="estadoC" id="gridRadios2">
+                        <label class="labelEC form-check-label" for="gridRadios2">casado</label>
+                    </div>
+                    <div class="form-check disabled">
+                        <input class="estadoC form-check-input" type="radio" value="casado" name="estadoC" id="gridRadios3">
+                        <label class="labelEC form-check-label" for="gridRadios3">Viudo</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="button" class="boton btn btn-primary">Guardar</button>
+            </div>
+        </div> 
     </form>
 
-    <div>
-        <ul class="listado">
-        </ul>
-    </div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Tipo alimentación</th>
+                <th scope="col">Estado civil</th>
+            </tr>
+        </thead>
+        <tbody class="listado">
+        </tbody>
+        
+    </table>
     
-    <script src="http://code.jquery.com/jquery-1.6.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
     
     <script src="script.jqueryFunctions.js"></script>
 </body>

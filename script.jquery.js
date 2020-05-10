@@ -23,6 +23,7 @@ const showDatos =() =>{
     }
 
     limpiarDatos();
+    
     $(".listado").append(`<li>${nombre} ${apellido} ${select}</li>`);
 }
 

@@ -15,16 +15,26 @@ const limpiarDatos =function(){
 };
 
 
-const showDatos = function(){
+const showDatos =function(){
     var nombre = $nombre.val();
     var apellido = $apellido.val();
     var alimentacion = $vegetarian.prop('checked') ? "Es vegetariano" : "";
     var sexo = $sexo.val();
     var estadoC = $(".estadoC:checked").val();
 
+    if(!nombre || !apellido){
+        return;
+    }
+    
     limpiarDatos();
     $(".listado").append(
-       "<tr>" + "<th scope="row">" + "1" + "</th>" + "<td>" + nombre + "</td>" + "<td>" + apellido +"<td>"+ "<td>" + sexo +"<td>"+ "<td>" + alimentacion +"<td>"+ "<td>" + estadoC +"<td>"+"</tr>");          
-};
+        "<tr>"+
+            "<td>" + nombre + "</td>" + 
+            "<td>" + apellido + "</td>" + 
+            "<td>" + sexo + "</td>" +
+            "<td>" + alimentacion + "</td>" +
+            "<td>" + estadoC + "</td>" +
+        "</tr>"); 
+}
 
 $(".boton").click(showDatos)
